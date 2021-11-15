@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/underwater ambient noise.mp3-3cc382a7bfb19bb1f5dd8ead81e100f0.mp3str"
+
+[deps]
+
+source_file="res://underwater ambient noise.mp3"
+dest_files=[ "res://.import/underwater ambient noise.mp3-3cc382a7bfb19bb1f5dd8ead81e100f0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

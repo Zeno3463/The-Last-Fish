@@ -8,7 +8,6 @@ export var speed = 50
 export var movement_is_random = false
 export var patrol_direction = Vector2.ZERO
 onready var vel = patrol_direction
-onready var hearts = get_tree().get_root().get_node("Scene 1/CanvasLayer/Hearts")
 
 func _ready():
 	randomize()
@@ -38,4 +37,4 @@ func _physics_process(_delta):
 
 func _on_Area2D_body_entered(body):
 	if body is Player and not body.is_hurt:
-		hearts.take_out_one_life()
+		body.die()

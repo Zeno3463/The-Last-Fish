@@ -7,8 +7,6 @@ export var horizontal_speed_limit = 100
 var vel = Vector2.ZERO
 var moving_left = false
 
-onready var hearts = get_tree().get_root().get_node("Scene 1/CanvasLayer/Hearts")
-
 func _physics_process(_delta):
 	vel.y = -speed
 	
@@ -22,7 +20,7 @@ func _physics_process(_delta):
 
 func _on_Area2D_body_entered(body):
 	if body is Player and not body.is_hurt:
-		hearts.take_out_one_life()
+		body.die()
 	if not body == self and not body is Trash:
 		var particle_effect = preload("res://CPUParticles2D.tscn").instance()
 		particle_effect.one_shot = true

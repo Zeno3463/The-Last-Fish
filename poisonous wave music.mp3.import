@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/poisonous wave music.mp3-280af731519ad7c8fc921c06d2e2bc33.mp3str"
+
+[deps]
+
+source_file="res://poisonous wave music.mp3"
+dest_files=[ "res://.import/poisonous wave music.mp3-280af731519ad7c8fc921c06d2e2bc33.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
