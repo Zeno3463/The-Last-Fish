@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Global Variables.gd" type="Script" id=1]
 [ext_resource path="res://underwater ambient noise.mp3" type="AudioStream" id=2]
 [ext_resource path="res://M_PLUS_1_Code/static/MPLUS1Code-Medium.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://M_PLUS_1_Code/static/MPLUS1Code-Light.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Dialogue.gd" type="Script" id=5]
+[ext_resource path="res://end music.mp3" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -45,10 +46,10 @@ __meta__ = {
 }
 
 [node name="Timer" type="Label" parent="Dialogue And Timer"]
-margin_left = 904.0
-margin_top = 7.0
-margin_right = 1023.0
-margin_bottom = 57.0
+margin_left = 875.0
+margin_top = 5.0
+margin_right = 1021.0
+margin_bottom = 55.0
 custom_fonts/font = SubResource( 2 )
 text = "0"
 valign = 1
@@ -56,3 +57,6 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Theme2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )

@@ -49,6 +49,7 @@ tracks/0/keys = {
 
 [node name="Trash" type="KinematicBody2D"]
 modulate = Color( 0.47451, 0.47451, 0.47451, 1 )
+collision_layer = 0
 script = ExtResource( 2 )
 trash_sprites = [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ) ]
 big_trash_sprites = [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
@@ -60,6 +61,8 @@ texture = ExtResource( 7 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0, -0.5 )

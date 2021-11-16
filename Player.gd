@@ -11,6 +11,7 @@ var is_hurt = false
 var can_move = true
 
 func _ready():
+	GlobalVariables.get_node("Dialogue And Timer").set_process(true)
 	global_position = GlobalVariables.check_point
 
 func _physics_process(delta):

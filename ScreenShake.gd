@@ -1,7 +1,7 @@
 extends Camera2D
 
-export var amplitude = 100
-export var frequency = 100
+export var amplitude = 50
+export var frequency = 50
 export var time = 0.5
 
 var shake_amount = 0

@@ -1,0 +1,174 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://TileMap.tres" type="TileSet" id=1]
+[ext_resource path="res://White Square.png" type="Texture" id=2]
+[ext_resource path="res://M_PLUS_1_Code/static/MPLUS1Code-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://M_PLUS_1_Code/static/MPLUS1Code-Medium.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Menu.gd" type="Script" id=5]
+[ext_resource path="res://APfkB6p - Imgur.png" type="Texture" id=6]
+[ext_resource path="res://Select.wav" type="AudioStream" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0.172549 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="Theme" id=4]
+Button/styles/hover = SubResource( 2 )
+Button/styles/normal = SubResource( 3 )
+Button/styles/pressed = SubResource( 6 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 60
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "fade out"
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+modulate = Color( 0.541176, 0.541176, 0.541176, 1 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -131067, 0, 0, -131066, 1, 0, -131065, 1, 0, -131064, 1, 0, -65531, 3, 0, -65530, 4, 0, -65529, 4, 0, -65528, 4, 0, 65525, 1, 0, 65526, 1, 0, 65527, 1, 0, 65528, 2, 0, 65530, 10, 0, 65531, 8, 0, 5, 3, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 131061, 4, 0, 131062, 4, 0, 131063, 4, 0, 131064, 7, 0, 131065, 1, 0, 131066, 1, 0, 131067, 2, 0, 65540, -1073741814, 0, 65541, 3, 0, 65542, 4, 0, 65543, 4, 0, 65544, 4, 0, 196597, 4, 0, 196598, 4, 0, 196599, 4, 0, 196600, 4, 0, 196601, 4, 0, 196602, 4, 0, 196603, 1610612739, 0, 131077, 3, 0, 131078, 4, 0, 131079, 4, 0, 131080, 4, 0, 262133, 4, 0, 262134, 4, 0, 262135, 4, 0, 262136, 4, 0, 262137, 4, 0, 262138, 4, 0, 262139, 1610612739, 0, 262141, 9, 0, 196609, 10, 0, 196610, 8, 0, 196613, 3, 0, 196614, 4, 0, 196615, 4, 0, 196616, 4, 0, 327669, 4, 0, 327670, 4, 0, 327671, 4, 0, 327672, 4, 0, 327673, 4, 0, 327674, 4, 0, 327675, 7, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 6, 0, 262150, 4, 0, 262151, 4, 0, 262152, 4, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.25, 0.25 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+margin_left = 111.0
+margin_top = 85.0
+margin_right = 646.0
+margin_bottom = 262.0
+custom_colors/font_color = Color( 0.0196078, 0.192157, 0.109804, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "The Ocean Was Once Clean"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 108.0
+margin_top = 84.0
+margin_right = 643.0
+margin_bottom = 261.0
+custom_colors/font_color = Color( 0.101961, 0.501961, 0.305882, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "The Ocean Was Once Clean"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+margin_left = 471.0
+margin_top = 381.0
+margin_right = 610.0
+margin_bottom = 468.0
+focus_mode = 0
+theme = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Scene Transition" type="Control" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Scene Transition"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = -62.0
+margin_top = -52.0
+margin_right = 1085.0
+margin_bottom = 655.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Scene Transition"]
+autoplay = "fade out"
+anims/RESET = SubResource( 7 )
+"anims/fade out" = SubResource( 8 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource( 7 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2( 1, 0 )
+z_index = -1
+amount = 500
+lifetime = 5.0
+emission_shape = 2
+emission_rect_extents = Vector2( 200, 100 )
+gravity = Vector2( 0, -0.01 )
+scale_amount = 0.5
+color = Color( 0, 0, 0, 1 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( -113, -67 )
+scale = Vector2( 0.140625, 0.140625 )
+texture = ExtResource( 6 )
+color = Color( 0.662745, 0.662745, 0.662745, 1 )
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.388235, 0.388235, 0.388235, 0.168627 )
+position = Vector2( -113, -67 )
+scale = Vector2( 237.75, 237.75 )
+texture = ExtResource( 2 )
+
+[connection signal="button_down" from="CanvasLayer/Button" to="." method="_on_Button_button_down"]
